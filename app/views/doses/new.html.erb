@@ -1,0 +1,8 @@
+<h1 class="text-center">Add Ingredients</h1>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :ingredient, collection: Ingredient.order %>
+  <%= f.input :description %>
+  <%= f.submit "Submit"%>
+<% end %>
+
+<%= link_to 'Back', cocktails_path %>
